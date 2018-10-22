@@ -1,15 +1,15 @@
 # CS580u Programming and System Tools
 ## Fall 2018
-### PROGRAM 2 README FILE
+### PROGRAM 3 README FILE
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
-- What parts of the program you were not able to complete
+- None
 
 ## REFERENCES:
-- List any outside resources used
+- None
 
 ## MISCELLANEOUS COMMENTS:
-- Anything you would like the grader to know
+- I have a homework extension from the instructor till Sunday midnight, Oct 21 2018. If you have any questions, please email me at scao16@binghamton.edu.
 
 # Assignment Description
 ## Program 3 - Unix System Tools

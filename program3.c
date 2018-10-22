@@ -1,4 +1,3 @@
-#include "badmem.h"
 #include <stdlib.h>
 #include <stdio.h>
 #pragma GCC diagnostic ignored "-Wreturn-local-addr"
@@ -6,26 +5,28 @@
 
 void f1(){
     int *a = malloc(sizeof(int) * 3);
-    for (int i = 0; i < sizeof(int); i++){
+    for (int i = 0; i <sizeof(a)/sizeof(int); i++){
         a[i] = i;
     }
+    free(a);
 }
 void f2(){
     int a[10];
-    for (int i = 0; i < sizeof(a); i++){
+    for (int i = 0; i < sizeof(a)/sizeof(int); i++){
         a[i] = i;
     }
-    for (int i = 10; i >= sizeof(a); i++){
+    for (int i =9; i >= 0; i--){
         printf("%d ", a[i]);
     }
     printf("\n");
 }
 
 void f3(){
-    char * cptr = calloc(10, sizeof(char));
+    char * cptr = calloc(12, sizeof(char));
     cptr[10] = 'a';
-    char * junk = cptr[0];
-    free(junk);
+    char * junk=&cptr[0];
+   // free(junk);
+    free(cptr);
 }
 
 /**** DO NOT ALTER anything below here ****/
@@ -78,5 +79,4 @@ int main(){
     /* This phase will never be used, since no one will get past the
     * earlier ones. But just in case, make this one extra hard. */
     phase_6();
-
 }
