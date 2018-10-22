@@ -23,5 +23,11 @@ clean: program3.o bomb.o program3
 	rm -r ./keys
 
 submit:
-	
+	git add makefile
+	git add bscript.sh
+	git add bomb_defused.log
+	git add keys/
+	git commit -a -m "2nd commit"
+	git push
+	git rev-parse HEAD
 	
